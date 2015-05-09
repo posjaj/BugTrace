@@ -1,4 +1,10 @@
-﻿using JAJ.WinForm.Comm;
+﻿/*----------------------------------------------------------------  
+ *  Copyright (C) 2014-2016 
+ *  All rights reserved
+ *  创建人：posjaj 
+ *  创建时间：2015-05-09  
+ * ----------------------------------------------------------------*/
+using JAJ.WinForm.Comm;
 using JAJ.WinForm.PPM;
 using LumiSoft.Net.IMAP;
 using LumiSoft.Net.IMAP.Client;
