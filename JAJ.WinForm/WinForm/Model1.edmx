@@ -1,0 +1,1995 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BugTraceModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="BugTraceModelStoreContainer">
+          <EntitySet Name="PPM_MessageRecord" EntityType="BugTraceModel.Store.PPM_MessageRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPM_ProblemTrace" EntityType="BugTraceModel.Store.PPM_ProblemTrace" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPM_ProblemTraceHis" EntityType="BugTraceModel.Store.PPM_ProblemTraceHis" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPM_ProblemTraceImage" EntityType="BugTraceModel.Store.PPM_ProblemTraceImage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPM_ProjectInfo" EntityType="BugTraceModel.Store.PPM_ProjectInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPM_ProjectPlan" EntityType="BugTraceModel.Store.PPM_ProjectPlan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPM_ProjectTeam" EntityType="BugTraceModel.Store.PPM_ProjectTeam" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PPM_ShareFile" EntityType="BugTraceModel.Store.PPM_ShareFile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SCM_SaleOrder" EntityType="BugTraceModel.Store.SCM_SaleOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Menu" EntityType="BugTraceModel.Store.SYS_Menu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Role" EntityType="BugTraceModel.Store.SYS_Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_SortDict" EntityType="BugTraceModel.Store.SYS_SortDict" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_User" EntityType="BugTraceModel.Store.SYS_User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_UserExt" EntityType="BugTraceModel.Store.SYS_UserExt" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_UserRole" EntityType="BugTraceModel.Store.SYS_UserRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Version" EntityType="BugTraceModel.Store.SYS_Version" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_ProjectPlan" EntityType="BugTraceModel.Store.V_ProjectPlan" store:Type="Views" store:Schema="dbo" store:Name="V_ProjectPlan">
+            <DefiningQuery>SELECT 
+      [V_ProjectPlan].[ID] AS [ID], 
+      [V_ProjectPlan].[Unit] AS [Unit], 
+      [V_ProjectPlan].[Activity] AS [Activity], 
+      [V_ProjectPlan].[BusinessCode] AS [BusinessCode], 
+      [V_ProjectPlan].[Task] AS [Task], 
+      [V_ProjectPlan].[BudgetWorkload] AS [BudgetWorkload], 
+      [V_ProjectPlan].[BudgetBeginDate] AS [BudgetBeginDate], 
+      [V_ProjectPlan].[BudgetEndDate] AS [BudgetEndDate], 
+      [V_ProjectPlan].[DeleteFlag] AS [DeleteFlag], 
+      [V_ProjectPlan].[ProjectCode] AS [ProjectCode], 
+      [V_ProjectPlan].[HideFlag] AS [HideFlag], 
+      [V_ProjectPlan].[RealWorkload] AS [RealWorkload], 
+      [V_ProjectPlan].[RealBeginDate] AS [RealBeginDate], 
+      [V_ProjectPlan].[RealEndDate] AS [RealEndDate], 
+      [V_ProjectPlan].[TestPassDate] AS [TestPassDate], 
+      [V_ProjectPlan].[Status] AS [Status], 
+      [V_ProjectPlan].[DealPerson] AS [DealPerson], 
+      [V_ProjectPlan].[TestPerson] AS [TestPerson], 
+      [V_ProjectPlan].[ProblemTraceID] AS [ProblemTraceID], 
+      [V_ProjectPlan].[DispatchStatus] AS [DispatchStatus], 
+      [V_ProjectPlan].[DiffAnalyze] AS [DiffAnalyze]
+      FROM [dbo].[V_ProjectPlan] AS [V_ProjectPlan]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_PPM_MessageRecord_PPM_ProblemTrace" Association="BugTraceModel.Store.FK_PPM_MessageRecord_PPM_ProblemTrace">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_MessageRecord" EntitySet="PPM_MessageRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_MessageRecord_SYS_User" Association="BugTraceModel.Store.FK_PPM_MessageRecord_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_MessageRecord" EntitySet="PPM_MessageRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_MessageRecord_SYS_User1" Association="BugTraceModel.Store.FK_PPM_MessageRecord_SYS_User1">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_MessageRecord" EntitySet="PPM_MessageRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProblemTrace" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_PPM_ProblemTrace">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_ProblemTrace1" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProblemTrace1" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_PPM_ProblemTrace1">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_ProblemTrace1" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProblemTrace2" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_PPM_ProblemTrace2">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_ProblemTrace1" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProjectInfo" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_PPM_ProjectInfo">
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProjectPlan" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_PPM_ProjectPlan">
+            <End Role="PPM_ProjectPlan" EntitySet="PPM_ProjectPlan" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User1" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_SYS_User1">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User2" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_SYS_User2">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User3" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_SYS_User3">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User4" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_SYS_User4">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User5" Association="BugTraceModel.Store.FK_PPM_ProblemTrace_SYS_User5">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTraceImage_PPM_ProblemTrace" Association="BugTraceModel.Store.FK_PPM_ProblemTraceImage_PPM_ProblemTrace">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_ProblemTraceImage" EntitySet="PPM_ProblemTraceImage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectInfo_SYS_User" Association="BugTraceModel.Store.FK_PPM_ProjectInfo_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectPlan_PPM_ProjectInfo" Association="BugTraceModel.Store.FK_PPM_ProjectPlan_PPM_ProjectInfo">
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+            <End Role="PPM_ProjectPlan" EntitySet="PPM_ProjectPlan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectPlan_SYS_User" Association="BugTraceModel.Store.FK_PPM_ProjectPlan_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectPlan" EntitySet="PPM_ProjectPlan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectPlan_SYS_User1" Association="BugTraceModel.Store.FK_PPM_ProjectPlan_SYS_User1">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectPlan" EntitySet="PPM_ProjectPlan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectTeam_PPM_ProjectInfo" Association="BugTraceModel.Store.FK_PPM_ProjectTeam_PPM_ProjectInfo">
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+            <End Role="PPM_ProjectTeam" EntitySet="PPM_ProjectTeam" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectTeam_SYS_User" Association="BugTraceModel.Store.FK_PPM_ProjectTeam_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectTeam" EntitySet="PPM_ProjectTeam" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectTeam_SYS_User1" Association="BugTraceModel.Store.FK_PPM_ProjectTeam_SYS_User1">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectTeam" EntitySet="PPM_ProjectTeam" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ShareFile_SYS_SortDict" Association="BugTraceModel.Store.FK_PPM_ShareFile_SYS_SortDict">
+            <End Role="SYS_SortDict" EntitySet="SYS_SortDict" />
+            <End Role="PPM_ShareFile" EntitySet="PPM_ShareFile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ShareFile_SYS_User" Association="BugTraceModel.Store.FK_PPM_ShareFile_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ShareFile" EntitySet="PPM_ShareFile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_User_PPM_ProjectInfo" Association="BugTraceModel.Store.FK_SYS_User_PPM_ProjectInfo">
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+            <End Role="SYS_User" EntitySet="SYS_User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_UserExt_SYS_User" Association="BugTraceModel.Store.FK_SYS_UserExt_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="SYS_UserExt" EntitySet="SYS_UserExt" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="PPM_MessageRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MessageFrom" Type="varchar" MaxLength="50" />
+          <Property Name="MessageTo" Type="varchar" MaxLength="50" />
+          <Property Name="ProblemTraceID" Type="int" />
+          <Property Name="MsgContent" Type="nvarchar" MaxLength="2000" />
+          <Property Name="MsgType" Type="tinyint" />
+          <Property Name="NotifyFlag" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="PPM_ProblemTrace">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProjectUse" Type="nvarchar" MaxLength="200" />
+          <Property Name="Module" Type="nvarchar" MaxLength="200" />
+          <Property Name="Menu" Type="nvarchar" MaxLength="200" />
+          <Property Name="Problem" Type="nvarchar(max)" />
+          <Property Name="FindPersonCode" Type="varchar" MaxLength="50" />
+          <Property Name="FindPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="FindDate" Type="datetime" />
+          <Property Name="Priority" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProPicture" Type="varbinary(max)" />
+          <Property Name="ProPicturePath" Type="nvarchar" MaxLength="200" />
+          <Property Name="DealPersonCode" Type="varchar" MaxLength="50" />
+          <Property Name="DealPerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="TestPersonCode" Type="varchar" MaxLength="50" />
+          <Property Name="TestPerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="TestPassDate" Type="datetime" />
+          <Property Name="BeginDealDate" Type="datetime" />
+          <Property Name="EndDealDate" Type="datetime" />
+          <Property Name="Solution" Type="nvarchar(max)" />
+          <Property Name="DealPicture" Type="varbinary(max)" />
+          <Property Name="DealPicturePath" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProjectManagerCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProjectManager" Type="nvarchar" MaxLength="50" />
+          <Property Name="TeamLeaderCode" Type="varchar" MaxLength="50" />
+          <Property Name="TeamLeader" Type="nvarchar" MaxLength="50" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreatePerson" Type="varchar" MaxLength="50" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdatePerson" Type="varchar" MaxLength="50" />
+          <Property Name="DeleteFlag" Type="tinyint" />
+          <Property Name="TestFlag" Type="tinyint" />
+          <Property Name="FormalFlag" Type="tinyint" />
+          <Property Name="ProblemType" Type="nvarchar" MaxLength="50" />
+          <Property Name="AttachmentName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AttachmentUniqueID" Type="varchar" MaxLength="100" />
+          <Property Name="AttachmentCreateBy" Type="varchar" MaxLength="50" />
+          <Property Name="AttachmentCreateDate" Type="datetime" />
+          <Property Name="ProjectPlanID" Type="int" />
+          <Property Name="IsRepeat" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="PPM_ProblemTraceHis">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ProjectCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProjectUse" Type="nvarchar" MaxLength="200" />
+          <Property Name="Module" Type="nvarchar" MaxLength="200" />
+          <Property Name="Menu" Type="nvarchar" MaxLength="200" />
+          <Property Name="Problem" Type="nvarchar(max)" />
+          <Property Name="FindPersonCode" Type="varchar" MaxLength="50" />
+          <Property Name="FindPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="FindDate" Type="datetime" />
+          <Property Name="Priority" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProPicture" Type="varbinary(max)" />
+          <Property Name="ProPicturePath" Type="nvarchar" MaxLength="200" />
+          <Property Name="DealPersonCode" Type="varchar" MaxLength="50" />
+          <Property Name="DealPerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="TestPersonCode" Type="varchar" MaxLength="50" />
+          <Property Name="TestPerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="TestPassDate" Type="datetime" />
+          <Property Name="BeginDealDate" Type="datetime" />
+          <Property Name="EndDealDate" Type="datetime" />
+          <Property Name="Solution" Type="nvarchar(max)" />
+          <Property Name="DealPicture" Type="varbinary(max)" />
+          <Property Name="DealPicturePath" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProjectManagerCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProjectManager" Type="nvarchar" MaxLength="50" />
+          <Property Name="TeamLeaderCode" Type="varchar" MaxLength="50" />
+          <Property Name="TeamLeader" Type="nvarchar" MaxLength="50" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreatePerson" Type="varchar" MaxLength="50" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdatePerson" Type="varchar" MaxLength="50" />
+          <Property Name="DeleteFlag" Type="tinyint" />
+          <Property Name="TestFlag" Type="tinyint" />
+          <Property Name="FormalFlag" Type="tinyint" />
+          <Property Name="ProblemType" Type="nvarchar" MaxLength="50" />
+          <Property Name="AttachmentName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AttachmentUniqueID" Type="varchar" MaxLength="100" />
+          <Property Name="AttachmentCreateBy" Type="varchar" MaxLength="50" />
+          <Property Name="AttachmentCreateDate" Type="datetime" />
+          <Property Name="ProjectPlanID" Type="int" />
+        </EntityType>
+        <EntityType Name="PPM_ProblemTraceImage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ProblemTraceID" Type="int" />
+          <Property Name="SerialNo" Type="int" />
+          <Property Name="ImageFile" Type="image" />
+          <Property Name="ImagePath" Type="varchar" MaxLength="500" />
+          <Property Name="StorageType" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="PPM_ProjectInfo">
+          <Key>
+            <PropertyRef Name="ProjectCode" />
+          </Key>
+          <Property Name="ProjectCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProjectDesc" Type="text" />
+          <Property Name="BeginDate" Type="datetime" />
+          <Property Name="OnLineDate" Type="datetime" />
+          <Property Name="ProjectManagerCode" Type="varchar" MaxLength="50" />
+          <Property Name="TestPublishDate" Type="datetime" />
+          <Property Name="FormalPublishDate" Type="datetime" />
+          <Property Name="UsedCustom" Type="nvarchar" MaxLength="2000" />
+          <Property Name="NeedPMCheck" Type="tinyint" />
+          <Property Name="SVN" Type="varchar" MaxLength="200" />
+          <Property Name="DevServerInfo" Type="nvarchar" MaxLength="1000" />
+          <Property Name="TestServerInfo" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PubServerInfo" Type="nvarchar" MaxLength="500" />
+          <Property Name="RequireDoc" Type="nvarchar" MaxLength="200" />
+          <Property Name="UIPrototype" Type="nvarchar" MaxLength="200" />
+          <Property Name="OpInstruction" Type="nvarchar" MaxLength="200" />
+          <Property Name="OtherInfo" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreatePerson" Type="varchar" MaxLength="50" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdatePerson" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PPM_ProjectPlan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BusinessCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProjectCode" Type="varchar" MaxLength="50" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Activity" Type="nvarchar" MaxLength="50" />
+          <Property Name="Task" Type="nvarchar" MaxLength="200" />
+          <Property Name="BudgetWorkload" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="BudgetBeginDate" Type="datetime" />
+          <Property Name="BudgetEndDate" Type="datetime" />
+          <Property Name="RealWorkload" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="RealBeginDate" Type="datetime" />
+          <Property Name="RealEndDate" Type="datetime" />
+          <Property Name="RealTestEndDate" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProgressRate" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="DiffAnalyze" Type="nvarchar" MaxLength="500" />
+          <Property Name="ResourceCode" Type="varchar" MaxLength="50" />
+          <Property Name="ResourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TestResourceCode" Type="varchar" MaxLength="50" />
+          <Property Name="TestResourceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreatePerson" Type="varchar" MaxLength="50" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="UpdatePerson" Type="varchar" MaxLength="50" />
+          <Property Name="DeleteFlag" Type="tinyint" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="500" />
+          <Property Name="PlanType" Type="nvarchar" MaxLength="50" />
+          <Property Name="HideFlag" Type="tinyint" />
+          <Property Name="ParentPlanID" Type="int" />
+        </EntityType>
+        <EntityType Name="PPM_ProjectTeam">
+          <Key>
+            <PropertyRef Name="ProjectCode" />
+            <PropertyRef Name="TeamLeader" />
+            <PropertyRef Name="TeamMember" />
+          </Key>
+          <Property Name="ProjectCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TeamLeader" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TeamMember" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PPM_ShareFile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SortCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="200" />
+          <Property Name="FileSize" Type="numeric" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="500" />
+          <Property Name="FileDesc" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreateBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="SCM_SaleOrder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AgentTel" Type="nchar" MaxLength="10" />
+          <Property Name="CustomName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CustomTel" Type="nvarchar" MaxLength="200" />
+          <Property Name="CustomAddr" Type="nvarchar" MaxLength="500" />
+          <Property Name="BookDate" Type="datetime" />
+          <Property Name="DeliveryDate" Type="datetime" />
+          <Property Name="DeliveryType" Type="nvarchar" MaxLength="200" />
+          <Property Name="DeliveryNo" Type="nvarchar" MaxLength="200" />
+          <Property Name="GoodName" Type="nvarchar" MaxLength="200" />
+          <Property Name="GoodSort" Type="nvarchar" MaxLength="200" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="Qty" Type="decimal" Scale="2" />
+          <Property Name="SumMoney" Type="decimal" Scale="2" />
+          <Property Name="GiftDesc" Type="nvarchar" MaxLength="200" />
+          <Property Name="GiftQty" Type="decimal" Scale="2" />
+          <Property Name="PayType" Type="nvarchar" MaxLength="200" />
+          <Property Name="PayStatus" Type="nvarchar" MaxLength="200" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="SYS_Menu">
+          <Key>
+            <PropertyRef Name="MenuCode" />
+          </Key>
+          <Property Name="MenuCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MenuName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="ParentCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="OrderCode" Type="int" Nullable="false" />
+          <Property Name="SortGrade" Type="tinyint" Nullable="false" />
+          <Property Name="HasNext" Type="tinyint" Nullable="false" />
+          <Property Name="FormModule" Type="varchar" MaxLength="50" />
+          <Property Name="FormName" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SYS_Role">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Name="RoleCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_SortDict">
+          <Key>
+            <PropertyRef Name="SortCode" />
+          </Key>
+          <Property Name="SortCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SortName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="tinyint" />
+          <Property Name="OrderNum" Type="int" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="SYS_User">
+          <Key>
+            <PropertyRef Name="UserCode" />
+          </Key>
+          <Property Name="UserCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="QQ" Type="varchar" MaxLength="50" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="DefaultProjectCode" Type="varchar" MaxLength="50" />
+          <Property Name="UrlPort" Type="varchar" MaxLength="200" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SYS_UserExt">
+          <Key>
+            <PropertyRef Name="UserCode" />
+          </Key>
+          <Property Name="UserCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Host" Type="nvarchar" MaxLength="200" />
+          <Property Name="Port" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Username" Type="nvarchar" MaxLength="200" />
+          <Property Name="Password" Type="nvarchar" MaxLength="200" />
+          <Property Name="TempTableName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailPassword" Type="varchar" MaxLength="100" />
+          <Property Name="CommonProject" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="SYS_UserRole">
+          <Key>
+            <PropertyRef Name="UserCode" />
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Name="UserCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RoleCode" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_Version">
+          <Key>
+            <PropertyRef Name="VersionNo" />
+          </Key>
+          <Property Name="VersionNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PublishDate" Type="datetime" />
+          <Property Name="IsDefault" Type="tinyint" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="200" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="500" />
+          <Property Name="FileServiceUrlPort" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“BugTrace.dbo.V_ProjectPlan”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="V_ProjectPlan">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="DispatchStatus" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Activity" Type="nvarchar" MaxLength="50" />
+          <Property Name="BusinessCode" Type="varchar" MaxLength="50" />
+          <Property Name="Task" Type="nvarchar" MaxLength="200" />
+          <Property Name="BudgetWorkload" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="BudgetBeginDate" Type="datetime" />
+          <Property Name="BudgetEndDate" Type="datetime" />
+          <Property Name="DeleteFlag" Type="tinyint" />
+          <Property Name="ProjectCode" Type="varchar" MaxLength="50" />
+          <Property Name="HideFlag" Type="tinyint" />
+          <Property Name="RealWorkload" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="RealBeginDate" Type="datetime" />
+          <Property Name="RealEndDate" Type="datetime" />
+          <Property Name="TestPassDate" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="DealPerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="TestPerson" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProblemTraceID" Type="int" />
+          <Property Name="DispatchStatus" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="DiffAnalyze" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_PPM_MessageRecord_PPM_ProblemTrace">
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="0..1" />
+          <End Role="PPM_MessageRecord" Type="BugTraceModel.Store.PPM_MessageRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_MessageRecord">
+              <PropertyRef Name="ProblemTraceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_MessageRecord_SYS_User">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_MessageRecord" Type="BugTraceModel.Store.PPM_MessageRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_MessageRecord">
+              <PropertyRef Name="MessageFrom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_MessageRecord_SYS_User1">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_MessageRecord" Type="BugTraceModel.Store.PPM_MessageRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_MessageRecord">
+              <PropertyRef Name="MessageTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProblemTrace">
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="1" />
+          <End Role="PPM_ProblemTrace1" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProblemTrace1">
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="1" />
+          <End Role="PPM_ProblemTrace1" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProblemTrace2">
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="1" />
+          <End Role="PPM_ProblemTrace1" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProjectInfo">
+          <End Role="PPM_ProjectInfo" Type="BugTraceModel.Store.PPM_ProjectInfo" Multiplicity="0..1" />
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="ProjectCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProjectPlan">
+          <End Role="PPM_ProjectPlan" Type="BugTraceModel.Store.PPM_ProjectPlan" Multiplicity="0..1" />
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectPlan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="ProjectPlanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="FindPersonCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User1">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="DealPersonCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User2">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="ProjectManagerCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User3">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="TeamLeaderCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User4">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="AttachmentCreateBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User5">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="TestPersonCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTraceImage_PPM_ProblemTrace">
+          <End Role="PPM_ProblemTrace" Type="BugTraceModel.Store.PPM_ProblemTrace" Multiplicity="0..1" />
+          <End Role="PPM_ProblemTraceImage" Type="BugTraceModel.Store.PPM_ProblemTraceImage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTraceImage">
+              <PropertyRef Name="ProblemTraceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectInfo_SYS_User">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ProjectInfo" Type="BugTraceModel.Store.PPM_ProjectInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectManagerCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectPlan_PPM_ProjectInfo">
+          <End Role="PPM_ProjectInfo" Type="BugTraceModel.Store.PPM_ProjectInfo" Multiplicity="0..1" />
+          <End Role="PPM_ProjectPlan" Type="BugTraceModel.Store.PPM_ProjectPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectPlan">
+              <PropertyRef Name="ProjectCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectPlan_SYS_User">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ProjectPlan" Type="BugTraceModel.Store.PPM_ProjectPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectPlan">
+              <PropertyRef Name="ResourceCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectPlan_SYS_User1">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ProjectPlan" Type="BugTraceModel.Store.PPM_ProjectPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectPlan">
+              <PropertyRef Name="TestResourceCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectTeam_PPM_ProjectInfo">
+          <End Role="PPM_ProjectInfo" Type="BugTraceModel.Store.PPM_ProjectInfo" Multiplicity="1" />
+          <End Role="PPM_ProjectTeam" Type="BugTraceModel.Store.PPM_ProjectTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectTeam">
+              <PropertyRef Name="ProjectCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectTeam_SYS_User">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="1" />
+          <End Role="PPM_ProjectTeam" Type="BugTraceModel.Store.PPM_ProjectTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectTeam">
+              <PropertyRef Name="TeamLeader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectTeam_SYS_User1">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="1" />
+          <End Role="PPM_ProjectTeam" Type="BugTraceModel.Store.PPM_ProjectTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectTeam">
+              <PropertyRef Name="TeamMember" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ShareFile_SYS_SortDict">
+          <End Role="SYS_SortDict" Type="BugTraceModel.Store.SYS_SortDict" Multiplicity="0..1" />
+          <End Role="PPM_ShareFile" Type="BugTraceModel.Store.PPM_ShareFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_SortDict">
+              <PropertyRef Name="SortCode" />
+            </Principal>
+            <Dependent Role="PPM_ShareFile">
+              <PropertyRef Name="SortCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ShareFile_SYS_User">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="0..1" />
+          <End Role="PPM_ShareFile" Type="BugTraceModel.Store.PPM_ShareFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ShareFile">
+              <PropertyRef Name="CreateBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_User_PPM_ProjectInfo">
+          <End Role="PPM_ProjectInfo" Type="BugTraceModel.Store.PPM_ProjectInfo" Multiplicity="0..1" />
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectCode" />
+            </Principal>
+            <Dependent Role="SYS_User">
+              <PropertyRef Name="DefaultProjectCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_UserExt_SYS_User">
+          <End Role="SYS_User" Type="BugTraceModel.Store.SYS_User" Multiplicity="1" />
+          <End Role="SYS_UserExt" Type="BugTraceModel.Store.SYS_UserExt" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="SYS_UserExt">
+              <PropertyRef Name="UserCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BugTraceModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BugTraceEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="PPM_MessageRecord" EntityType="BugTraceModel.PPM_MessageRecord" />
+          <EntitySet Name="PPM_ProblemTraceHis" EntityType="BugTraceModel.PPM_ProblemTraceHis" />
+          <EntitySet Name="PPM_ProblemTraceImage" EntityType="BugTraceModel.PPM_ProblemTraceImage" />
+          <EntitySet Name="PPM_ProjectInfo" EntityType="BugTraceModel.PPM_ProjectInfo" />
+          <EntitySet Name="PPM_ProjectPlan" EntityType="BugTraceModel.PPM_ProjectPlan" />
+          <EntitySet Name="PPM_ProjectTeam" EntityType="BugTraceModel.PPM_ProjectTeam" />
+          <EntitySet Name="PPM_ShareFile" EntityType="BugTraceModel.PPM_ShareFile" />
+          <EntitySet Name="SCM_SaleOrder" EntityType="BugTraceModel.SCM_SaleOrder" />
+          <EntitySet Name="SYS_Menu" EntityType="BugTraceModel.SYS_Menu" />
+          <EntitySet Name="SYS_Role" EntityType="BugTraceModel.SYS_Role" />
+          <EntitySet Name="SYS_SortDict" EntityType="BugTraceModel.SYS_SortDict" />
+          <EntitySet Name="SYS_User" EntityType="BugTraceModel.SYS_User" />
+          <EntitySet Name="SYS_UserExt" EntityType="BugTraceModel.SYS_UserExt" />
+          <EntitySet Name="SYS_Version" EntityType="BugTraceModel.SYS_Version" />
+          <EntitySet Name="V_ProjectPlan" EntityType="BugTraceModel.V_ProjectPlan" />
+          <AssociationSet Name="FK_PPM_MessageRecord_SYS_User" Association="BugTraceModel.FK_PPM_MessageRecord_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_MessageRecord" EntitySet="PPM_MessageRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_MessageRecord_SYS_User1" Association="BugTraceModel.FK_PPM_MessageRecord_SYS_User1">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_MessageRecord" EntitySet="PPM_MessageRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectInfo_SYS_User" Association="BugTraceModel.FK_PPM_ProjectInfo_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectPlan_PPM_ProjectInfo" Association="BugTraceModel.FK_PPM_ProjectPlan_PPM_ProjectInfo">
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+            <End Role="PPM_ProjectPlan" EntitySet="PPM_ProjectPlan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectTeam_PPM_ProjectInfo" Association="BugTraceModel.FK_PPM_ProjectTeam_PPM_ProjectInfo">
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+            <End Role="PPM_ProjectTeam" EntitySet="PPM_ProjectTeam" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_User_PPM_ProjectInfo" Association="BugTraceModel.FK_SYS_User_PPM_ProjectInfo">
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+            <End Role="SYS_User" EntitySet="SYS_User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectPlan_SYS_User" Association="BugTraceModel.FK_PPM_ProjectPlan_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectPlan" EntitySet="PPM_ProjectPlan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectPlan_SYS_User1" Association="BugTraceModel.FK_PPM_ProjectPlan_SYS_User1">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectPlan" EntitySet="PPM_ProjectPlan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectTeam_SYS_User" Association="BugTraceModel.FK_PPM_ProjectTeam_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectTeam" EntitySet="PPM_ProjectTeam" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProjectTeam_SYS_User1" Association="BugTraceModel.FK_PPM_ProjectTeam_SYS_User1">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProjectTeam" EntitySet="PPM_ProjectTeam" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ShareFile_SYS_SortDict" Association="BugTraceModel.FK_PPM_ShareFile_SYS_SortDict">
+            <End Role="SYS_SortDict" EntitySet="SYS_SortDict" />
+            <End Role="PPM_ShareFile" EntitySet="PPM_ShareFile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ShareFile_SYS_User" Association="BugTraceModel.FK_PPM_ShareFile_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ShareFile" EntitySet="PPM_ShareFile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SYS_UserExt_SYS_User" Association="BugTraceModel.FK_SYS_UserExt_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="SYS_UserExt" EntitySet="SYS_UserExt" />
+          </AssociationSet>
+          <EntitySet Name="PPM_ProblemTrace" EntityType="BugTraceModel.PPM_ProblemTrace" />
+          <AssociationSet Name="FK_PPM_MessageRecord_PPM_ProblemTrace" Association="BugTraceModel.FK_PPM_MessageRecord_PPM_ProblemTrace">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_MessageRecord" EntitySet="PPM_MessageRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProblemTrace" Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_ProblemTrace1" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProblemTrace1" Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace1">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_ProblemTrace1" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProblemTrace2" Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace2">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_ProblemTrace1" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProjectInfo" Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProjectInfo">
+            <End Role="PPM_ProjectInfo" EntitySet="PPM_ProjectInfo" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_PPM_ProjectPlan" Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProjectPlan">
+            <End Role="PPM_ProjectPlan" EntitySet="PPM_ProjectPlan" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User" Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User1" Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User1">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User2" Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User2">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User3" Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User3">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User4" Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User4">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTrace_SYS_User5" Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User5">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PPM_ProblemTraceImage_PPM_ProblemTrace" Association="BugTraceModel.FK_PPM_ProblemTraceImage_PPM_ProblemTrace">
+            <End Role="PPM_ProblemTrace" EntitySet="PPM_ProblemTrace" />
+            <End Role="PPM_ProblemTraceImage" EntitySet="PPM_ProblemTraceImage" />
+          </AssociationSet>
+          <EntitySet Name="SYS_UserRole" EntityType="BugTraceModel.SYS_UserRole" />
+        </EntityContainer>
+        <EntityType Name="PPM_MessageRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="MessageFrom" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MessageTo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ProblemTraceID" />
+          <Property Type="String" Name="MsgContent" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="MsgType" />
+          <Property Type="Byte" Name="NotifyFlag" />
+          <NavigationProperty Name="SYS_User" Relationship="BugTraceModel.FK_PPM_MessageRecord_SYS_User" FromRole="PPM_MessageRecord" ToRole="SYS_User" />
+          <NavigationProperty Name="SYS_User1" Relationship="BugTraceModel.FK_PPM_MessageRecord_SYS_User1" FromRole="PPM_MessageRecord" ToRole="SYS_User" />
+          <NavigationProperty Name="PPM_ProblemTrace" Relationship="BugTraceModel.FK_PPM_MessageRecord_PPM_ProblemTrace" FromRole="PPM_MessageRecord" ToRole="PPM_ProblemTrace" />
+        </EntityType>
+        <EntityType Name="PPM_ProblemTraceHis">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Type="Int32" Name="AutoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ProjectCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectUse" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Module" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Menu" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Problem" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FindPersonCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FindPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FindDate" Precision="3" />
+          <Property Type="String" Name="Priority" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="ProPicture" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="ProPicturePath" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DealPersonCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DealPerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TestPersonCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TestPerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="TestPassDate" Precision="3" />
+          <Property Type="DateTime" Name="BeginDealDate" Precision="3" />
+          <Property Type="DateTime" Name="EndDealDate" Precision="3" />
+          <Property Type="String" Name="Solution" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="DealPicture" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="DealPicturePath" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectManagerCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectManager" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TeamLeaderCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TeamLeader" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Memo" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="CreatePerson" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="UpdateDate" Precision="3" />
+          <Property Type="String" Name="UpdatePerson" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="DeleteFlag" />
+          <Property Type="Byte" Name="TestFlag" />
+          <Property Type="Byte" Name="FormalFlag" />
+          <Property Type="String" Name="ProblemType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AttachmentName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AttachmentUniqueID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AttachmentCreateBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AttachmentCreateDate" Precision="3" />
+          <Property Type="Int32" Name="ProjectPlanID" />
+        </EntityType>
+        <EntityType Name="PPM_ProblemTraceImage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ProblemTraceID" />
+          <Property Type="Int32" Name="SerialNo" />
+          <Property Type="Binary" Name="ImageFile" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="ImagePath" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="StorageType" />
+          <NavigationProperty Name="PPM_ProblemTrace" Relationship="BugTraceModel.FK_PPM_ProblemTraceImage_PPM_ProblemTrace" FromRole="PPM_ProblemTraceImage" ToRole="PPM_ProblemTrace" />
+        </EntityType>
+        <EntityType Name="PPM_ProjectInfo">
+          <Key>
+            <PropertyRef Name="ProjectCode" />
+          </Key>
+          <Property Type="String" Name="ProjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectDesc" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="BeginDate" Precision="3" />
+          <Property Type="DateTime" Name="OnLineDate" Precision="3" />
+          <Property Type="String" Name="ProjectManagerCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TestPublishDate" Precision="3" />
+          <Property Type="DateTime" Name="FormalPublishDate" Precision="3" />
+          <Property Type="String" Name="UsedCustom" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="NeedPMCheck" />
+          <Property Type="String" Name="SVN" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DevServerInfo" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TestServerInfo" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PubServerInfo" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RequireDoc" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UIPrototype" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OpInstruction" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OtherInfo" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="CreatePerson" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="UpdateDate" Precision="3" />
+          <Property Type="String" Name="UpdatePerson" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SYS_User" Relationship="BugTraceModel.FK_PPM_ProjectInfo_SYS_User" FromRole="PPM_ProjectInfo" ToRole="SYS_User" />
+          <NavigationProperty Name="PPM_ProjectPlan" Relationship="BugTraceModel.FK_PPM_ProjectPlan_PPM_ProjectInfo" FromRole="PPM_ProjectInfo" ToRole="PPM_ProjectPlan" />
+          <NavigationProperty Name="PPM_ProjectTeam" Relationship="BugTraceModel.FK_PPM_ProjectTeam_PPM_ProjectInfo" FromRole="PPM_ProjectInfo" ToRole="PPM_ProjectTeam" />
+          <NavigationProperty Name="SYS_User1" Relationship="BugTraceModel.FK_SYS_User_PPM_ProjectInfo" FromRole="PPM_ProjectInfo" ToRole="SYS_User" />
+          <NavigationProperty Name="PPM_ProblemTrace" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProjectInfo" FromRole="PPM_ProjectInfo" ToRole="PPM_ProblemTrace" />
+        </EntityType>
+        <EntityType Name="PPM_ProjectPlan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="BusinessCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Unit" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Activity" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Task" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="BudgetWorkload" Precision="8" Scale="2" />
+          <Property Type="DateTime" Name="BudgetBeginDate" Precision="3" />
+          <Property Type="DateTime" Name="BudgetEndDate" Precision="3" />
+          <Property Type="Decimal" Name="RealWorkload" Precision="8" Scale="2" />
+          <Property Type="DateTime" Name="RealBeginDate" Precision="3" />
+          <Property Type="DateTime" Name="RealEndDate" Precision="3" />
+          <Property Type="DateTime" Name="RealTestEndDate" Precision="3" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="ProgressRate" Precision="8" Scale="2" />
+          <Property Type="String" Name="DiffAnalyze" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ResourceCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ResourceName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TestResourceCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TestResourceName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="CreatePerson" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="UpdateDate" Precision="3" />
+          <Property Type="String" Name="UpdatePerson" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="DeleteFlag" />
+          <Property Type="String" Name="Memo" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PlanType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="HideFlag" />
+          <NavigationProperty Name="PPM_ProjectInfo" Relationship="BugTraceModel.FK_PPM_ProjectPlan_PPM_ProjectInfo" FromRole="PPM_ProjectPlan" ToRole="PPM_ProjectInfo" />
+          <NavigationProperty Name="SYS_User" Relationship="BugTraceModel.FK_PPM_ProjectPlan_SYS_User" FromRole="PPM_ProjectPlan" ToRole="SYS_User" />
+          <NavigationProperty Name="SYS_User1" Relationship="BugTraceModel.FK_PPM_ProjectPlan_SYS_User1" FromRole="PPM_ProjectPlan" ToRole="SYS_User" />
+          <NavigationProperty Name="PPM_ProblemTrace" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProjectPlan" FromRole="PPM_ProjectPlan" ToRole="PPM_ProblemTrace" />
+          <Property Type="Int32" Name="ParentPlanID" />
+        </EntityType>
+        <EntityType Name="PPM_ProjectTeam">
+          <Key>
+            <PropertyRef Name="ProjectCode" />
+            <PropertyRef Name="TeamLeader" />
+            <PropertyRef Name="TeamMember" />
+          </Key>
+          <Property Type="String" Name="ProjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TeamLeader" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TeamMember" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <NavigationProperty Name="PPM_ProjectInfo" Relationship="BugTraceModel.FK_PPM_ProjectTeam_PPM_ProjectInfo" FromRole="PPM_ProjectTeam" ToRole="PPM_ProjectInfo" />
+          <NavigationProperty Name="SYS_User" Relationship="BugTraceModel.FK_PPM_ProjectTeam_SYS_User" FromRole="PPM_ProjectTeam" ToRole="SYS_User" />
+          <NavigationProperty Name="SYS_User1" Relationship="BugTraceModel.FK_PPM_ProjectTeam_SYS_User1" FromRole="PPM_ProjectTeam" ToRole="SYS_User" />
+        </EntityType>
+        <EntityType Name="PPM_ShareFile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="SortCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FileName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="FileSize" Precision="18" Scale="0" />
+          <Property Type="String" Name="FilePath" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FileDesc" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="Memo" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SYS_SortDict" Relationship="BugTraceModel.FK_PPM_ShareFile_SYS_SortDict" FromRole="PPM_ShareFile" ToRole="SYS_SortDict" />
+          <NavigationProperty Name="SYS_User" Relationship="BugTraceModel.FK_PPM_ShareFile_SYS_User" FromRole="PPM_ShareFile" ToRole="SYS_User" />
+        </EntityType>
+        <EntityType Name="SCM_SaleOrder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="AgentName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AgentTel" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="CustomName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustomTel" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustomAddr" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BookDate" Precision="3" />
+          <Property Type="DateTime" Name="DeliveryDate" Precision="3" />
+          <Property Type="String" Name="DeliveryType" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DeliveryNo" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GoodName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GoodSort" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Qty" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="SumMoney" Precision="18" Scale="2" />
+          <Property Type="String" Name="GiftDesc" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="GiftQty" Precision="18" Scale="2" />
+          <Property Type="String" Name="PayType" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayStatus" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Memo" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_Menu">
+          <Key>
+            <PropertyRef Name="MenuCode" />
+          </Key>
+          <Property Type="String" Name="MenuCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MenuName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParentCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="OrderCode" Nullable="false" />
+          <Property Type="Byte" Name="SortGrade" Nullable="false" />
+          <Property Type="Byte" Name="HasNext" Nullable="false" />
+          <Property Type="String" Name="FormModule" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FormName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SYS_Role">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Type="String" Name="RoleCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RoleName" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_SortDict">
+          <Key>
+            <PropertyRef Name="SortCode" />
+          </Key>
+          <Property Type="String" Name="SortCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SortName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="Type" />
+          <Property Type="Int32" Name="OrderNum" />
+          <Property Type="String" Name="Memo" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PPM_ShareFile" Relationship="BugTraceModel.FK_PPM_ShareFile_SYS_SortDict" FromRole="SYS_SortDict" ToRole="PPM_ShareFile" />
+        </EntityType>
+        <EntityType Name="SYS_User">
+          <Key>
+            <PropertyRef Name="UserCode" />
+          </Key>
+          <Property Type="String" Name="UserCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="QQ" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tel" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DefaultProjectCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UrlPort" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <NavigationProperty Name="PPM_MessageRecord" Relationship="BugTraceModel.FK_PPM_MessageRecord_SYS_User" FromRole="SYS_User" ToRole="PPM_MessageRecord" />
+          <NavigationProperty Name="PPM_MessageRecord1" Relationship="BugTraceModel.FK_PPM_MessageRecord_SYS_User1" FromRole="SYS_User" ToRole="PPM_MessageRecord" />
+          <NavigationProperty Name="PPM_ProjectInfo" Relationship="BugTraceModel.FK_PPM_ProjectInfo_SYS_User" FromRole="SYS_User" ToRole="PPM_ProjectInfo" />
+          <NavigationProperty Name="PPM_ProjectInfo1" Relationship="BugTraceModel.FK_SYS_User_PPM_ProjectInfo" FromRole="SYS_User" ToRole="PPM_ProjectInfo" />
+          <NavigationProperty Name="PPM_ProjectPlan" Relationship="BugTraceModel.FK_PPM_ProjectPlan_SYS_User" FromRole="SYS_User" ToRole="PPM_ProjectPlan" />
+          <NavigationProperty Name="PPM_ProjectPlan1" Relationship="BugTraceModel.FK_PPM_ProjectPlan_SYS_User1" FromRole="SYS_User" ToRole="PPM_ProjectPlan" />
+          <NavigationProperty Name="PPM_ProjectTeam" Relationship="BugTraceModel.FK_PPM_ProjectTeam_SYS_User" FromRole="SYS_User" ToRole="PPM_ProjectTeam" />
+          <NavigationProperty Name="PPM_ProjectTeam1" Relationship="BugTraceModel.FK_PPM_ProjectTeam_SYS_User1" FromRole="SYS_User" ToRole="PPM_ProjectTeam" />
+          <NavigationProperty Name="PPM_ShareFile" Relationship="BugTraceModel.FK_PPM_ShareFile_SYS_User" FromRole="SYS_User" ToRole="PPM_ShareFile" />
+          <NavigationProperty Name="SYS_UserExt" Relationship="BugTraceModel.FK_SYS_UserExt_SYS_User" FromRole="SYS_User" ToRole="SYS_UserExt" />
+          <NavigationProperty Name="PPM_ProblemTrace" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User" FromRole="SYS_User" ToRole="PPM_ProblemTrace" />
+          <NavigationProperty Name="PPM_ProblemTrace1" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User1" FromRole="SYS_User" ToRole="PPM_ProblemTrace" />
+          <NavigationProperty Name="PPM_ProblemTrace2" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User2" FromRole="SYS_User" ToRole="PPM_ProblemTrace" />
+          <NavigationProperty Name="PPM_ProblemTrace3" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User3" FromRole="SYS_User" ToRole="PPM_ProblemTrace" />
+          <NavigationProperty Name="PPM_ProblemTrace4" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User4" FromRole="SYS_User" ToRole="PPM_ProblemTrace" />
+          <NavigationProperty Name="PPM_ProblemTrace5" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User5" FromRole="SYS_User" ToRole="PPM_ProblemTrace" />
+        </EntityType>
+        <EntityType Name="SYS_UserExt">
+          <Key>
+            <PropertyRef Name="UserCode" />
+          </Key>
+          <Property Type="String" Name="UserCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Host" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Port" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ServiceName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Username" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TempTableName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SYS_User" Relationship="BugTraceModel.FK_SYS_UserExt_SYS_User" FromRole="SYS_UserExt" ToRole="SYS_User" />
+          <Property Type="String" Name="EmailPassword" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CommonProject" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SYS_Version">
+          <Key>
+            <PropertyRef Name="VersionNo" />
+          </Key>
+          <Property Type="String" Name="VersionNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PublishDate" Precision="3" />
+          <Property Type="Byte" Name="IsDefault" />
+          <Property Type="String" Name="Memo" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FilePath" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FileServiceUrlPort" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="V_ProjectPlan">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="DispatchStatus" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Unit" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Activity" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BusinessCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Task" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="BudgetWorkload" Precision="8" Scale="2" />
+          <Property Type="DateTime" Name="BudgetBeginDate" Precision="3" />
+          <Property Type="DateTime" Name="BudgetEndDate" Precision="3" />
+          <Property Type="Byte" Name="DeleteFlag" />
+          <Property Type="String" Name="ProjectCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="HideFlag" />
+          <Property Type="Decimal" Name="RealWorkload" Precision="8" Scale="2" />
+          <Property Type="DateTime" Name="RealBeginDate" Precision="3" />
+          <Property Type="DateTime" Name="RealEndDate" Precision="3" />
+          <Property Type="DateTime" Name="TestPassDate" Precision="3" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DealPerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TestPerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProblemTraceID" />
+          <Property Type="String" Name="DispatchStatus" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DiffAnalyze" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_PPM_MessageRecord_SYS_User">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_MessageRecord" Role="PPM_MessageRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_MessageRecord">
+              <PropertyRef Name="MessageFrom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_MessageRecord_SYS_User1">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_MessageRecord" Role="PPM_MessageRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_MessageRecord">
+              <PropertyRef Name="MessageTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectInfo_SYS_User">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProjectInfo" Role="PPM_ProjectInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectManagerCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectPlan_PPM_ProjectInfo">
+          <End Type="BugTraceModel.PPM_ProjectInfo" Role="PPM_ProjectInfo" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProjectPlan" Role="PPM_ProjectPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectPlan">
+              <PropertyRef Name="ProjectCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectTeam_PPM_ProjectInfo">
+          <End Type="BugTraceModel.PPM_ProjectInfo" Role="PPM_ProjectInfo" Multiplicity="1" />
+          <End Type="BugTraceModel.PPM_ProjectTeam" Role="PPM_ProjectTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectTeam">
+              <PropertyRef Name="ProjectCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_User_PPM_ProjectInfo">
+          <End Type="BugTraceModel.PPM_ProjectInfo" Role="PPM_ProjectInfo" Multiplicity="0..1" />
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectCode" />
+            </Principal>
+            <Dependent Role="SYS_User">
+              <PropertyRef Name="DefaultProjectCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectPlan_SYS_User">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProjectPlan" Role="PPM_ProjectPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectPlan">
+              <PropertyRef Name="ResourceCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectPlan_SYS_User1">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProjectPlan" Role="PPM_ProjectPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectPlan">
+              <PropertyRef Name="TestResourceCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectTeam_SYS_User">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="1" />
+          <End Type="BugTraceModel.PPM_ProjectTeam" Role="PPM_ProjectTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectTeam">
+              <PropertyRef Name="TeamLeader" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProjectTeam_SYS_User1">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="1" />
+          <End Type="BugTraceModel.PPM_ProjectTeam" Role="PPM_ProjectTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProjectTeam">
+              <PropertyRef Name="TeamMember" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ShareFile_SYS_SortDict">
+          <End Type="BugTraceModel.SYS_SortDict" Role="SYS_SortDict" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ShareFile" Role="PPM_ShareFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_SortDict">
+              <PropertyRef Name="SortCode" />
+            </Principal>
+            <Dependent Role="PPM_ShareFile">
+              <PropertyRef Name="SortCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ShareFile_SYS_User">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ShareFile" Role="PPM_ShareFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ShareFile">
+              <PropertyRef Name="CreateBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SYS_UserExt_SYS_User">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="1" />
+          <End Type="BugTraceModel.SYS_UserExt" Role="SYS_UserExt" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="SYS_UserExt">
+              <PropertyRef Name="UserCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PPM_ProblemTrace">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="ProjectCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectUse" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Module" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Menu" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Problem" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FindPersonCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FindPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FindDate" Precision="3" />
+          <Property Type="String" Name="Priority" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="ProPicture" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="ProPicturePath" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DealPersonCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DealPerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TestPersonCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TestPerson" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="TestPassDate" Precision="3" />
+          <Property Type="DateTime" Name="BeginDealDate" Precision="3" />
+          <Property Type="DateTime" Name="EndDealDate" Precision="3" />
+          <Property Type="String" Name="Solution" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="DealPicture" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="DealPicturePath" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectManagerCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectManager" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TeamLeaderCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TeamLeader" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Memo" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="CreatePerson" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="UpdateDate" Precision="3" />
+          <Property Type="String" Name="UpdatePerson" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="DeleteFlag" />
+          <Property Type="Byte" Name="TestFlag" />
+          <Property Type="Byte" Name="FormalFlag" />
+          <Property Type="String" Name="ProblemType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AttachmentName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AttachmentUniqueID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AttachmentCreateBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AttachmentCreateDate" Precision="3" />
+          <Property Type="Int32" Name="ProjectPlanID" />
+          <Property Type="String" Name="IsRepeat" MaxLength="2" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PPM_MessageRecord" Relationship="BugTraceModel.FK_PPM_MessageRecord_PPM_ProblemTrace" FromRole="PPM_ProblemTrace" ToRole="PPM_MessageRecord" />
+          <NavigationProperty Name="PPM_ProblemTrace1" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace" FromRole="PPM_ProblemTrace" ToRole="PPM_ProblemTrace1" />
+          <NavigationProperty Name="PPM_ProblemTrace2" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace" FromRole="PPM_ProblemTrace1" ToRole="PPM_ProblemTrace" />
+          <NavigationProperty Name="PPM_ProblemTrace11" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace1" FromRole="PPM_ProblemTrace" ToRole="PPM_ProblemTrace1" />
+          <NavigationProperty Name="PPM_ProblemTrace3" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace1" FromRole="PPM_ProblemTrace1" ToRole="PPM_ProblemTrace" />
+          <NavigationProperty Name="PPM_ProblemTrace12" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace2" FromRole="PPM_ProblemTrace" ToRole="PPM_ProblemTrace1" />
+          <NavigationProperty Name="PPM_ProblemTrace4" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace2" FromRole="PPM_ProblemTrace1" ToRole="PPM_ProblemTrace" />
+          <NavigationProperty Name="PPM_ProjectInfo" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProjectInfo" FromRole="PPM_ProblemTrace" ToRole="PPM_ProjectInfo" />
+          <NavigationProperty Name="PPM_ProjectPlan" Relationship="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProjectPlan" FromRole="PPM_ProblemTrace" ToRole="PPM_ProjectPlan" />
+          <NavigationProperty Name="SYS_User" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User" FromRole="PPM_ProblemTrace" ToRole="SYS_User" />
+          <NavigationProperty Name="SYS_User1" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User1" FromRole="PPM_ProblemTrace" ToRole="SYS_User" />
+          <NavigationProperty Name="SYS_User2" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User2" FromRole="PPM_ProblemTrace" ToRole="SYS_User" />
+          <NavigationProperty Name="SYS_User3" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User3" FromRole="PPM_ProblemTrace" ToRole="SYS_User" />
+          <NavigationProperty Name="SYS_User4" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User4" FromRole="PPM_ProblemTrace" ToRole="SYS_User" />
+          <NavigationProperty Name="SYS_User5" Relationship="BugTraceModel.FK_PPM_ProblemTrace_SYS_User5" FromRole="PPM_ProblemTrace" ToRole="SYS_User" />
+          <NavigationProperty Name="PPM_ProblemTraceImage" Relationship="BugTraceModel.FK_PPM_ProblemTraceImage_PPM_ProblemTrace" FromRole="PPM_ProblemTrace" ToRole="PPM_ProblemTraceImage" />
+        </EntityType>
+        <Association Name="FK_PPM_MessageRecord_PPM_ProblemTrace">
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_MessageRecord" Role="PPM_MessageRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_MessageRecord">
+              <PropertyRef Name="ProblemTraceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProblemTrace">
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProblemTrace1">
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProblemTrace2">
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProjectInfo">
+          <End Type="BugTraceModel.PPM_ProjectInfo" Role="PPM_ProjectInfo" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectInfo">
+              <PropertyRef Name="ProjectCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="ProjectCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_PPM_ProjectPlan">
+          <End Type="BugTraceModel.PPM_ProjectPlan" Role="PPM_ProjectPlan" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProjectPlan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="ProjectPlanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="FindPersonCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User1">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="DealPersonCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User2">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="ProjectManagerCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User3">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="TeamLeaderCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User4">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="AttachmentCreateBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTrace_SYS_User5">
+          <End Type="BugTraceModel.SYS_User" Role="SYS_User" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserCode" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTrace">
+              <PropertyRef Name="TestPersonCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PPM_ProblemTraceImage_PPM_ProblemTrace">
+          <End Type="BugTraceModel.PPM_ProblemTrace" Role="PPM_ProblemTrace" Multiplicity="0..1" />
+          <End Type="BugTraceModel.PPM_ProblemTraceImage" Role="PPM_ProblemTraceImage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PPM_ProblemTrace">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PPM_ProblemTraceImage">
+              <PropertyRef Name="ProblemTraceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SYS_UserRole">
+          <Key>
+            <PropertyRef Name="UserCode" />
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Type="String" Name="UserCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RoleCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BugTraceModelStoreContainer" CdmEntityContainer="BugTraceEntities">
+          <EntitySetMapping Name="PPM_MessageRecord">
+            <EntityTypeMapping TypeName="BugTraceModel.PPM_MessageRecord">
+              <MappingFragment StoreEntitySet="PPM_MessageRecord">
+                <ScalarProperty Name="NotifyFlag" ColumnName="NotifyFlag" />
+                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+                <ScalarProperty Name="MsgContent" ColumnName="MsgContent" />
+                <ScalarProperty Name="ProblemTraceID" ColumnName="ProblemTraceID" />
+                <ScalarProperty Name="MessageTo" ColumnName="MessageTo" />
+                <ScalarProperty Name="MessageFrom" ColumnName="MessageFrom" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PPM_ProblemTraceHis">
+            <EntityTypeMapping TypeName="BugTraceModel.PPM_ProblemTraceHis">
+              <MappingFragment StoreEntitySet="PPM_ProblemTraceHis">
+                <ScalarProperty Name="ProjectPlanID" ColumnName="ProjectPlanID" />
+                <ScalarProperty Name="AttachmentCreateDate" ColumnName="AttachmentCreateDate" />
+                <ScalarProperty Name="AttachmentCreateBy" ColumnName="AttachmentCreateBy" />
+                <ScalarProperty Name="AttachmentUniqueID" ColumnName="AttachmentUniqueID" />
+                <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+                <ScalarProperty Name="ProblemType" ColumnName="ProblemType" />
+                <ScalarProperty Name="FormalFlag" ColumnName="FormalFlag" />
+                <ScalarProperty Name="TestFlag" ColumnName="TestFlag" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="TeamLeader" ColumnName="TeamLeader" />
+                <ScalarProperty Name="TeamLeaderCode" ColumnName="TeamLeaderCode" />
+                <ScalarProperty Name="ProjectManager" ColumnName="ProjectManager" />
+                <ScalarProperty Name="ProjectManagerCode" ColumnName="ProjectManagerCode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DealPicturePath" ColumnName="DealPicturePath" />
+                <ScalarProperty Name="DealPicture" ColumnName="DealPicture" />
+                <ScalarProperty Name="Solution" ColumnName="Solution" />
+                <ScalarProperty Name="EndDealDate" ColumnName="EndDealDate" />
+                <ScalarProperty Name="BeginDealDate" ColumnName="BeginDealDate" />
+                <ScalarProperty Name="TestPassDate" ColumnName="TestPassDate" />
+                <ScalarProperty Name="TestPerson" ColumnName="TestPerson" />
+                <ScalarProperty Name="TestPersonCode" ColumnName="TestPersonCode" />
+                <ScalarProperty Name="DealPerson" ColumnName="DealPerson" />
+                <ScalarProperty Name="DealPersonCode" ColumnName="DealPersonCode" />
+                <ScalarProperty Name="ProPicturePath" ColumnName="ProPicturePath" />
+                <ScalarProperty Name="ProPicture" ColumnName="ProPicture" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="FindDate" ColumnName="FindDate" />
+                <ScalarProperty Name="FindPerson" ColumnName="FindPerson" />
+                <ScalarProperty Name="FindPersonCode" ColumnName="FindPersonCode" />
+                <ScalarProperty Name="Problem" ColumnName="Problem" />
+                <ScalarProperty Name="Menu" ColumnName="Menu" />
+                <ScalarProperty Name="Module" ColumnName="Module" />
+                <ScalarProperty Name="ProjectUse" ColumnName="ProjectUse" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PPM_ProblemTraceImage">
+            <EntityTypeMapping TypeName="BugTraceModel.PPM_ProblemTraceImage">
+              <MappingFragment StoreEntitySet="PPM_ProblemTraceImage">
+                <ScalarProperty Name="StorageType" ColumnName="StorageType" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="ImageFile" ColumnName="ImageFile" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="ProblemTraceID" ColumnName="ProblemTraceID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PPM_ProjectInfo">
+            <EntityTypeMapping TypeName="BugTraceModel.PPM_ProjectInfo">
+              <MappingFragment StoreEntitySet="PPM_ProjectInfo">
+                <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="OtherInfo" ColumnName="OtherInfo" />
+                <ScalarProperty Name="OpInstruction" ColumnName="OpInstruction" />
+                <ScalarProperty Name="UIPrototype" ColumnName="UIPrototype" />
+                <ScalarProperty Name="RequireDoc" ColumnName="RequireDoc" />
+                <ScalarProperty Name="PubServerInfo" ColumnName="PubServerInfo" />
+                <ScalarProperty Name="TestServerInfo" ColumnName="TestServerInfo" />
+                <ScalarProperty Name="DevServerInfo" ColumnName="DevServerInfo" />
+                <ScalarProperty Name="SVN" ColumnName="SVN" />
+                <ScalarProperty Name="NeedPMCheck" ColumnName="NeedPMCheck" />
+                <ScalarProperty Name="UsedCustom" ColumnName="UsedCustom" />
+                <ScalarProperty Name="FormalPublishDate" ColumnName="FormalPublishDate" />
+                <ScalarProperty Name="TestPublishDate" ColumnName="TestPublishDate" />
+                <ScalarProperty Name="ProjectManagerCode" ColumnName="ProjectManagerCode" />
+                <ScalarProperty Name="OnLineDate" ColumnName="OnLineDate" />
+                <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+                <ScalarProperty Name="ProjectDesc" ColumnName="ProjectDesc" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PPM_ProjectPlan">
+            <EntityTypeMapping TypeName="BugTraceModel.PPM_ProjectPlan">
+              <MappingFragment StoreEntitySet="PPM_ProjectPlan">
+                <ScalarProperty Name="ParentPlanID" ColumnName="ParentPlanID" />
+                <ScalarProperty Name="HideFlag" ColumnName="HideFlag" />
+                <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="TestResourceName" ColumnName="TestResourceName" />
+                <ScalarProperty Name="TestResourceCode" ColumnName="TestResourceCode" />
+                <ScalarProperty Name="ResourceName" ColumnName="ResourceName" />
+                <ScalarProperty Name="ResourceCode" ColumnName="ResourceCode" />
+                <ScalarProperty Name="DiffAnalyze" ColumnName="DiffAnalyze" />
+                <ScalarProperty Name="ProgressRate" ColumnName="ProgressRate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="RealTestEndDate" ColumnName="RealTestEndDate" />
+                <ScalarProperty Name="RealEndDate" ColumnName="RealEndDate" />
+                <ScalarProperty Name="RealBeginDate" ColumnName="RealBeginDate" />
+                <ScalarProperty Name="RealWorkload" ColumnName="RealWorkload" />
+                <ScalarProperty Name="BudgetEndDate" ColumnName="BudgetEndDate" />
+                <ScalarProperty Name="BudgetBeginDate" ColumnName="BudgetBeginDate" />
+                <ScalarProperty Name="BudgetWorkload" ColumnName="BudgetWorkload" />
+                <ScalarProperty Name="Task" ColumnName="Task" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="BusinessCode" ColumnName="BusinessCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PPM_ProjectTeam">
+            <EntityTypeMapping TypeName="BugTraceModel.PPM_ProjectTeam">
+              <MappingFragment StoreEntitySet="PPM_ProjectTeam">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TeamMember" ColumnName="TeamMember" />
+                <ScalarProperty Name="TeamLeader" ColumnName="TeamLeader" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PPM_ShareFile">
+            <EntityTypeMapping TypeName="BugTraceModel.PPM_ShareFile">
+              <MappingFragment StoreEntitySet="PPM_ShareFile">
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="FileDesc" ColumnName="FileDesc" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCM_SaleOrder">
+            <EntityTypeMapping TypeName="BugTraceModel.SCM_SaleOrder">
+              <MappingFragment StoreEntitySet="SCM_SaleOrder">
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+                <ScalarProperty Name="GiftQty" ColumnName="GiftQty" />
+                <ScalarProperty Name="GiftDesc" ColumnName="GiftDesc" />
+                <ScalarProperty Name="SumMoney" ColumnName="SumMoney" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="GoodSort" ColumnName="GoodSort" />
+                <ScalarProperty Name="GoodName" ColumnName="GoodName" />
+                <ScalarProperty Name="DeliveryNo" ColumnName="DeliveryNo" />
+                <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="BookDate" ColumnName="BookDate" />
+                <ScalarProperty Name="CustomAddr" ColumnName="CustomAddr" />
+                <ScalarProperty Name="CustomTel" ColumnName="CustomTel" />
+                <ScalarProperty Name="CustomName" ColumnName="CustomName" />
+                <ScalarProperty Name="AgentTel" ColumnName="AgentTel" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Menu">
+            <EntityTypeMapping TypeName="BugTraceModel.SYS_Menu">
+              <MappingFragment StoreEntitySet="SYS_Menu">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="FormName" ColumnName="FormName" />
+                <ScalarProperty Name="FormModule" ColumnName="FormModule" />
+                <ScalarProperty Name="HasNext" ColumnName="HasNext" />
+                <ScalarProperty Name="SortGrade" ColumnName="SortGrade" />
+                <ScalarProperty Name="OrderCode" ColumnName="OrderCode" />
+                <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+                <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+                <ScalarProperty Name="MenuCode" ColumnName="MenuCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Role">
+            <EntityTypeMapping TypeName="BugTraceModel.SYS_Role">
+              <MappingFragment StoreEntitySet="SYS_Role">
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_SortDict">
+            <EntityTypeMapping TypeName="BugTraceModel.SYS_SortDict">
+              <MappingFragment StoreEntitySet="SYS_SortDict">
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="SortName" ColumnName="SortName" />
+                <ScalarProperty Name="SortCode" ColumnName="SortCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_User">
+            <EntityTypeMapping TypeName="BugTraceModel.SYS_User">
+              <MappingFragment StoreEntitySet="SYS_User">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="UrlPort" ColumnName="UrlPort" />
+                <ScalarProperty Name="DefaultProjectCode" ColumnName="DefaultProjectCode" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="QQ" ColumnName="QQ" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_UserExt">
+            <EntityTypeMapping TypeName="BugTraceModel.SYS_UserExt">
+              <MappingFragment StoreEntitySet="SYS_UserExt">
+                <ScalarProperty Name="CommonProject" ColumnName="CommonProject" />
+                <ScalarProperty Name="EmailPassword" ColumnName="EmailPassword" />
+                <ScalarProperty Name="TempTableName" ColumnName="TempTableName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="Host" ColumnName="Host" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Version">
+            <EntityTypeMapping TypeName="BugTraceModel.SYS_Version">
+              <MappingFragment StoreEntitySet="SYS_Version">
+                <ScalarProperty Name="FileServiceUrlPort" ColumnName="FileServiceUrlPort" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="VersionNo" ColumnName="VersionNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_ProjectPlan">
+            <EntityTypeMapping TypeName="BugTraceModel.V_ProjectPlan">
+              <MappingFragment StoreEntitySet="V_ProjectPlan">
+                <ScalarProperty Name="DiffAnalyze" ColumnName="DiffAnalyze" />
+                <ScalarProperty Name="DispatchStatus" ColumnName="DispatchStatus" />
+                <ScalarProperty Name="ProblemTraceID" ColumnName="ProblemTraceID" />
+                <ScalarProperty Name="TestPerson" ColumnName="TestPerson" />
+                <ScalarProperty Name="DealPerson" ColumnName="DealPerson" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TestPassDate" ColumnName="TestPassDate" />
+                <ScalarProperty Name="RealEndDate" ColumnName="RealEndDate" />
+                <ScalarProperty Name="RealBeginDate" ColumnName="RealBeginDate" />
+                <ScalarProperty Name="RealWorkload" ColumnName="RealWorkload" />
+                <ScalarProperty Name="HideFlag" ColumnName="HideFlag" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="BudgetEndDate" ColumnName="BudgetEndDate" />
+                <ScalarProperty Name="BudgetBeginDate" ColumnName="BudgetBeginDate" />
+                <ScalarProperty Name="BudgetWorkload" ColumnName="BudgetWorkload" />
+                <ScalarProperty Name="Task" ColumnName="Task" />
+                <ScalarProperty Name="BusinessCode" ColumnName="BusinessCode" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PPM_ProblemTrace">
+            <EntityTypeMapping TypeName="BugTraceModel.PPM_ProblemTrace">
+              <MappingFragment StoreEntitySet="PPM_ProblemTrace">
+                <ScalarProperty Name="IsRepeat" ColumnName="IsRepeat" />
+                <ScalarProperty Name="ProjectPlanID" ColumnName="ProjectPlanID" />
+                <ScalarProperty Name="AttachmentCreateDate" ColumnName="AttachmentCreateDate" />
+                <ScalarProperty Name="AttachmentCreateBy" ColumnName="AttachmentCreateBy" />
+                <ScalarProperty Name="AttachmentUniqueID" ColumnName="AttachmentUniqueID" />
+                <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+                <ScalarProperty Name="ProblemType" ColumnName="ProblemType" />
+                <ScalarProperty Name="FormalFlag" ColumnName="FormalFlag" />
+                <ScalarProperty Name="TestFlag" ColumnName="TestFlag" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="TeamLeader" ColumnName="TeamLeader" />
+                <ScalarProperty Name="TeamLeaderCode" ColumnName="TeamLeaderCode" />
+                <ScalarProperty Name="ProjectManager" ColumnName="ProjectManager" />
+                <ScalarProperty Name="ProjectManagerCode" ColumnName="ProjectManagerCode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DealPicturePath" ColumnName="DealPicturePath" />
+                <ScalarProperty Name="DealPicture" ColumnName="DealPicture" />
+                <ScalarProperty Name="Solution" ColumnName="Solution" />
+                <ScalarProperty Name="EndDealDate" ColumnName="EndDealDate" />
+                <ScalarProperty Name="BeginDealDate" ColumnName="BeginDealDate" />
+                <ScalarProperty Name="TestPassDate" ColumnName="TestPassDate" />
+                <ScalarProperty Name="TestPerson" ColumnName="TestPerson" />
+                <ScalarProperty Name="TestPersonCode" ColumnName="TestPersonCode" />
+                <ScalarProperty Name="DealPerson" ColumnName="DealPerson" />
+                <ScalarProperty Name="DealPersonCode" ColumnName="DealPersonCode" />
+                <ScalarProperty Name="ProPicturePath" ColumnName="ProPicturePath" />
+                <ScalarProperty Name="ProPicture" ColumnName="ProPicture" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="FindDate" ColumnName="FindDate" />
+                <ScalarProperty Name="FindPerson" ColumnName="FindPerson" />
+                <ScalarProperty Name="FindPersonCode" ColumnName="FindPersonCode" />
+                <ScalarProperty Name="Problem" ColumnName="Problem" />
+                <ScalarProperty Name="Menu" ColumnName="Menu" />
+                <ScalarProperty Name="Module" ColumnName="Module" />
+                <ScalarProperty Name="ProjectUse" ColumnName="ProjectUse" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_UserRole">
+            <EntityTypeMapping TypeName="BugTraceModel.SYS_UserRole">
+              <MappingFragment StoreEntitySet="SYS_UserRole">
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

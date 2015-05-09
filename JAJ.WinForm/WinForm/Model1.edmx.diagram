@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7930a3cd8d8c4dd2a5d175e3b05da63f" Name="关系图1" ZoomLevel="86">
+        <EntityTypeShape EntityType="BugTraceModel.PPM_MessageRecord" Width="1.5" PointX="9.402522279602719" PointY="9.6313308075216284" />
+        <EntityTypeShape EntityType="BugTraceModel.PPM_ProblemTraceHis" Width="1.5" PointX="6.8032649694025817" PointY="7.6734488940208445" />
+        <EntityTypeShape EntityType="BugTraceModel.PPM_ProblemTraceImage" Width="1.5" PointX="3.7499754371819902" PointY="13.832332259897298" />
+        <EntityTypeShape EntityType="BugTraceModel.PPM_ProjectInfo" Width="1.5" PointX="10.336955403134672" PointY="25.95192667560276" />
+        <EntityTypeShape EntityType="BugTraceModel.PPM_ProjectPlan" Width="1.5" PointX="2.767060083694318" PointY="10.125749786442961" />
+        <EntityTypeShape EntityType="BugTraceModel.PPM_ProjectTeam" Width="1.5" PointX="0.29982895231797779" PointY="0.33559124187361039" />
+        <EntityTypeShape EntityType="BugTraceModel.PPM_ShareFile" Width="1.5" PointX="4.4091756438879184" PointY="20.378799805594049" />
+        <EntityTypeShape EntityType="BugTraceModel.SCM_SaleOrder" Width="1.5" PointX="4.7754077710096761" PointY="16.828233503190908" />
+        <EntityTypeShape EntityType="BugTraceModel.SYS_Menu" Width="1.5" PointX="1.4042408416998762" PointY="25.133183207890571" />
+        <EntityTypeShape EntityType="BugTraceModel.SYS_Role" Width="1.5" PointX="1.2753014831223066" PointY="17.760325931832345" />
+        <EntityTypeShape EntityType="BugTraceModel.SYS_SortDict" Width="1.5" PointX="11.771653085840704" PointY="6.0203164694925384" />
+        <EntityTypeShape EntityType="BugTraceModel.SYS_User" Width="1.5" PointX="3.1457917574540675" PointY="12.366064271128767" />
+        <EntityTypeShape EntityType="BugTraceModel.SYS_UserExt" Width="1.5" PointX="5.5124337642977164" PointY="8.394037891362812" />
+        <EntityTypeShape EntityType="BugTraceModel.SYS_Version" Width="1.5" PointX="8.5476348868327374" PointY="17.66795869994348" />
+        <EntityTypeShape EntityType="BugTraceModel.V_ProjectPlan" Width="1.5" PointX="2.0492238262897469" PointY="1.8985261627931735" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_MessageRecord_SYS_User" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_MessageRecord_SYS_User1" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProjectInfo_SYS_User" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProjectPlan_PPM_ProjectInfo" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProjectTeam_PPM_ProjectInfo" />
+        <AssociationConnector Association="BugTraceModel.FK_SYS_User_PPM_ProjectInfo" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProjectPlan_SYS_User" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProjectPlan_SYS_User1" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProjectTeam_SYS_User" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProjectTeam_SYS_User1" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ShareFile_SYS_SortDict" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ShareFile_SYS_User" />
+        <AssociationConnector Association="BugTraceModel.FK_SYS_UserExt_SYS_User" />
+        <EntityTypeShape EntityType="BugTraceModel.PPM_ProblemTrace" Width="1.5" PointX="1.1899769833264766" PointY="8.5495532045837273" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_MessageRecord_PPM_ProblemTrace" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace1" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProblemTrace2" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProjectInfo" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_PPM_ProjectPlan" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User1" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User2" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User3" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User4" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTrace_SYS_User5" />
+        <AssociationConnector Association="BugTraceModel.FK_PPM_ProblemTraceImage_PPM_ProblemTrace" />
+        <EntityTypeShape EntityType="BugTraceModel.SYS_UserRole" Width="1.5" PointX="1.0829118159985691" PointY="16.409696482312725" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

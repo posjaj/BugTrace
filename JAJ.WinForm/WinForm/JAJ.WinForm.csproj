@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AA16468-725D-4F4C-A3A5-65FCBE6C8E47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JAJ.WinForm</RootNamespace>
+    <AssemblyName>BugTrace</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\jiaoanjian\Desktop\fb\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3EFB4A1777D1E73DBE53F888560565F030D7CE66</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>IPSetting_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Write.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net, Version=4.5.5510.19125, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Oracle.DataAccess, Version=2.111.6.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comm\CustomControl\ClockControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Comm\CustomControl\ClockControl.Designer.cs">
+      <DependentUpon>ClockControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comm\CustomControl\DateTimePickerX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comm\CustomControl\DataGridViewExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comm\CustomControl\DataGridViewExt.designer.cs">
+      <DependentUpon>DataGridViewExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comm\CustomControl\MultiColHeaderDgv.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comm\DBHelper\EFExtend.cs" />
+    <Compile Include="Comm\DBHelper\OracleHelper.cs" />
+    <Compile Include="Comm\DBHelper\SQLHelper.cs" />
+    <Compile Include="Comm\Encrypt.cs" />
+    <Compile Include="Comm\EntityContextHelper.cs" />
+    <Compile Include="Comm\GetInternetConStatus.cs" />
+    <Compile Include="Comm\HotKey.cs" />
+    <Compile Include="Comm\HttpHelper.cs" />
+    <Compile Include="Comm\ImageHelper.cs" />
+    <Compile Include="Comm\IPProvider.cs" />
+    <Compile Include="Comm\Excel\OpenXmlHelper.cs" />
+    <Compile Include="Comm\Excel\OpenXml.cs" />
+    <Compile Include="Comm\Excel\OpenXmlImages.cs" />
+    <Compile Include="Comm\MyLog.cs" />
+    <Compile Include="Comm\DBHelper\MSOracleHelper.cs" />
+    <Compile Include="Comm\RMBToChinese.cs" />
+    <Compile Include="Comm\SingleInstance\SoftHelper.cs" />
+    <Compile Include="Comm\WaitForm.cs" />
+    <Compile Include="Comm\WcfClient.cs" />
+    <Compile Include="FrmIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIndex.Designer.cs">
+      <DependentUpon>FrmIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWait.Designer.cs">
+      <DependentUpon>FrmWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\FrmChangeMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FrmChangeMoney.Designer.cs">
+      <DependentUpon>FrmChangeMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\FrmPictureBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FrmPictureBrowser.Designer.cs">
+      <DependentUpon>FrmPictureBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\TestFrmDownloadFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\TestFrmDownloadFile.Designer.cs">
+      <DependentUpon>TestFrmDownloadFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\FrmImportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FrmImportExcel.Designer.cs">
+      <DependentUpon>FrmImportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\TestFrmUploadFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\TestFrmUploadFile.Designer.cs">
+      <DependentUpon>TestFrmUploadFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comm\SingleInstance\FormSingle.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PPM\CreateProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPM\CreateProjectForm.Designer.cs">
+      <DependentUpon>CreateProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPM\FormArgument.cs" />
+    <Compile Include="PPM\ProjectPlanList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPM\ProjectPlanList.Designer.cs">
+      <DependentUpon>ProjectPlanList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPM\ProblemTraceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPM\ProblemTraceForm.Designer.cs">
+      <DependentUpon>ProblemTraceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPM\ProblemTraceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPM\ProblemTraceList.Designer.cs">
+      <DependentUpon>ProblemTraceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPM\ProjectPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPM\ProjectPlanForm.Designer.cs">
+      <DependentUpon>ProjectPlanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPM\ShareFileList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPM\ShareFileList.Designer.cs">
+      <DependentUpon>ShareFileList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPM_MessageRecord.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PPM_ProblemTrace.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PPM_ProblemTraceHis.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PPM_ProblemTraceImage.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PPM_ProjectInfo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PPM_ProjectPlan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PPM_ProjectTeam.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PPM_ShareFile.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Comm\SingleInstance\Toolkit.cs" />
+    <Compile Include="Comm\SingleInstance\SingleInstanceApplicationWrapper.cs" />
+    <Compile Include="SCM\SaleOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SCM\SaleOrderForm.Designer.cs">
+      <DependentUpon>SaleOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\SaleOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SCM\SaleOrderList.designer.cs">
+      <DependentUpon>SaleOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCM_SaleOrder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FileTransferSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WcfSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\FrmBrief.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\FrmBrief.Designer.cs">
+      <DependentUpon>FrmBrief.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\SystemSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\SystemSetForm.Designer.cs">
+      <DependentUpon>SystemSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comm\UserInfo.cs" />
+    <Compile Include="SYS_Menu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_Role.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_SortDict.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_UserExt.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_UserRole.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_Version.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_ProjectPlan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\cn.com.webxml.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Comm\CustomControl\DataGridViewExt.resx">
+      <DependentUpon>DataGridViewExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIndex.resx">
+      <DependentUpon>FrmIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWait.resx">
+      <DependentUpon>FrmWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FrmChangeMoney.resx">
+      <DependentUpon>FrmChangeMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FrmPictureBrowser.resx">
+      <DependentUpon>FrmPictureBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\TestFrmDownloadFile.resx">
+      <DependentUpon>TestFrmDownloadFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FrmImportExcel.resx">
+      <DependentUpon>FrmImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\TestFrmUploadFile.resx">
+      <DependentUpon>TestFrmUploadFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPM\CreateProjectForm.resx">
+      <DependentUpon>CreateProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPM\ProjectPlanForm.resx">
+      <DependentUpon>ProjectPlanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPM\ProjectPlanList.resx">
+      <DependentUpon>ProjectPlanList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPM\ProblemTraceForm.resx">
+      <DependentUpon>ProblemTraceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPM\ProblemTraceList.resx">
+      <DependentUpon>ProblemTraceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPM\ShareFileList.resx">
+      <DependentUpon>ShareFileList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SCM\SaleOrderForm.resx">
+      <DependentUpon>SaleOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCM\SaleOrderList.resx">
+      <DependentUpon>SaleOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\FrmBrief.resx">
+      <DependentUpon>FrmBrief.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\SystemSetForm.resx">
+      <DependentUpon>SystemSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\FileTransferSvc\FileService1.wsdl" />
+    <None Include="Service References\FileTransferSvc\FileService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileTransferSvc\FileService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileTransferSvc\FileService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfSvc\JAJ.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfSvc\JAJ1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfSvc\MessageService.wsdl" />
+    <None Include="Template\ProblemTraceTemplate.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ProjectPlanTemplate.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Web References\cn.com.webxml.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\cn.com.webxml.www\WeatherWebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Comm\Readme.txt" />
+    <Content Include="DLL\DocumentFormat.OpenXml.dll" />
+    <Content Include="DLL\log4net.dll" />
+    <Content Include="DLL\LumiSoft.Net.dll" />
+    <Content Include="DLL\LumiSoft.Net.xml" />
+    <Content Include="DLL\Oracle.DataAccess.dll" />
+    <Content Include="Resource\bg.jpg" />
+    <Content Include="Resource\bgimage.jpg" />
+    <Content Include="Resource\ImportExcelDemo.jpg" />
+    <Content Include="Resource\loading.gif" />
+    <None Include="Service References\FileTransferSvc\configuration91.svcinfo" />
+    <None Include="Service References\FileTransferSvc\configuration.svcinfo" />
+    <None Include="Service References\FileTransferSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FileTransferSvc\FileService1.disco" />
+    <Content Include="Resource\weather\0.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\1.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\10.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\11.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\12.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\13.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\14.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\15.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\16.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\17.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\18.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\19.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\2.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\20.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\21.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\22.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\23.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\24.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\25.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\26.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\27.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\28.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\29.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\3.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\30.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\31.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\4.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\5.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\6.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\7.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\8.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\weather\9.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\cn.com.webxml.www\WeatherWebService.disco" />
+    <Content Include="Write.ico" />
+    <None Include="Service References\WcfSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WcfSvc\configuration.svcinfo" />
+    <None Include="Service References\WcfSvc\configuration91.svcinfo" />
+    <None Include="Service References\WcfSvc\JAJ.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FileTransferSvc\" />
+    <WCFMetadataStorage Include="Service References\WcfSvc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.webxml.com.cn/WebServices/WeatherWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\cn.com.webxml.www\</RelPath>
+      <UpdateFromURL>http://www.webxml.com.cn/WebServices/WeatherWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BugTrace_cn_com_webxml_www_WeatherWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

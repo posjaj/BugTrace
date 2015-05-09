@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ad85d853-1cd1-499e-8b4f-d4ded01d99e3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9998/JAJ.WinServer" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JAJ.xsd" MetadataType="Schema" ID="9b13d3bc-4751-4ce1-badf-2af305b4382c" SourceId="1" SourceUrl="http://localhost:9998/JAJ.WinServer?xsd=xsd1" />
+    <MetadataFile FileName="JAJ.disco" MetadataType="Disco" ID="00e28f87-e10f-4399-898a-e7ea02bce8c1" SourceId="1" SourceUrl="http://localhost:9998/JAJ.WinServer?disco" />
+    <MetadataFile FileName="JAJ1.xsd" MetadataType="Schema" ID="4ac3b612-65ff-4301-a865-08866f7347e9" SourceId="1" SourceUrl="http://localhost:9998/JAJ.WinServer?xsd=xsd0" />
+    <MetadataFile FileName="MessageService.wsdl" MetadataType="Wsdl" ID="205940f6-3213-4f79-8425-24e1bc12926b" SourceId="1" SourceUrl="http://localhost:9998/JAJ.WinServer?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
